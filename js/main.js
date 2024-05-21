@@ -14,6 +14,15 @@ const animeReleaseDate = document.querySelector("#anime-release-date");
 const animeAgeRestriction = document.querySelector("#anime-age-restriction");
 const animeGender = document.querySelector("#anime-gender");
 
+const loadFistAnime = () => {
+  animeTitle.textContent = animeList["anime"][0].title;
+  animeLogo.setAttribute("src", animeList["anime"][0].logo);
+  animeDescription.textContent = animeList["anime"][0].description;
+  animeReleaseDate.textContent = animeList["anime"][0].releaseYear;
+  animeAgeRestriction.textContent = `+${animeList["anime"][0].ageRestriction}`;
+};
+loadFistAnime();
+
 // Changes anime data based on the anime the user clicked
 animeImageCovers.forEach((animeCoverImage) => {
   animeCoverImage.addEventListener("click", () => {

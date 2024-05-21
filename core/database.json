@@ -1,0 +1,54 @@
+{
+    "anime": [
+        {
+            "title": "Demon Slayer",
+            "description": "bla bla",
+            "logo": "../images/demon-slayer/demon-slayer-logo.png",
+            "cover": "../images/demon-slayer/demon-slayer-cover.png",
+            "background": "../images/demon-slayer/demon-slayer-background.jpg",
+            "ageRestriction": 16,
+            "releaseYear": 2024,
+            "gender": "Shounen"
+        },
+        {
+            "title": "Dragon Ball Super",
+            "description": "bla bla",
+            "logo": "../images/dragon-ball/dragon-ball-logo.png",
+            "cover": "../images/dragon-ball/dragon-ball-cover.jpeg",
+            "background": "../images/dragon-ball/dragon-ball-background.jpg",
+            "ageRestriction": 16,
+            "releaseYear": 2024,
+            "gender": "Shounen"
+        },
+        {
+            "title": "Jojo's bizarre adventure",
+            "description": "bla bla",
+            "logo": "../images/jojo/jojo-logo.png",
+            "cover": "../images/jojo/jojo-cover.png",
+            "background": "../images/jojo/jojo-background.jpg",
+            "ageRestriction": 16,
+            "releaseYear": 2024,
+            "gender": "Shounen"
+        },
+        {
+            "title": "Naruto",
+            "description": "bla bla",
+            "logo": "../images/naruto/naruto-logo.png",
+            "cover": "../images/naruto/naruto-cover.jpg",
+            "background": "../images/naruto/naruto-background.jpg",
+            "ageRestriction": 16,
+            "releaseYear": 2024,
+            "gender": "Shounen"
+        },
+        {
+            "title": "Death Note",
+            "description": "bla bla",
+            "logo": "../images/death-note/death-note-logo.png",
+            "cover": "../images/death-note/death-note-cover.jpeg",
+            "background": "../images/death-note/death-note-background.jpg",
+            "ageRestriction": 16,
+            "releaseYear": 2024,
+            "gender": "Shounen"
+        }
+    ]
+}

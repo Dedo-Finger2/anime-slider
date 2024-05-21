@@ -12,6 +12,10 @@
   --third: #52525B;
 }
 
+#editor {
+  --background-image: ""
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,15 +34,11 @@ body {
 }
 
 #background-image {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-}
-
-#background-image::before {
   content: "";
   position: absolute;
   top: 0;
@@ -202,31 +202,36 @@ button:hover {
 }
 
 .anime-cover-previous, .anime-cover-next {
+  position: relative;
   width: 140px;
   height: 200px;
   filter: brightness(70%) opacity(90%);
 }
 
-.anime-cover-first, .anime-cover-last {
+.anime-cover-away {
   width: 120px;
   height: 180px;
   filter: brightness(50%) opacity(80%);
 }
 
-.anime-cover-previous {
-  transform: translateX(20px);
-}
-
-.anime-cover-first {
+.anime-cover-image:nth-child(1) {
   transform: translateX(50px);
 }
 
-.anime-cover-next {
+.anime-cover-image:nth-child(2) {
+  transform: translateX(50px);
+}
+
+.anime-cover-image:nth-child(3) {
   transform: translateX(-20px);
   z-index: 1;
 }
 
-.anime-cover-last {
+.anime-cover-image:nth-child(4) {
+  transform: translateX(-50px);
+}
+
+.anime-cover-image:nth-child(5) {
   transform: translateX(-50px);
 }
 

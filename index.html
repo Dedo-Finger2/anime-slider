@@ -9,7 +9,12 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Anime<span id="color-anime-title">Slider</span></h1>
+        <h1>
+            <i class="fa-solid fa-sliders"></i>
+            <div>
+                Anime<span id="color-anime-title">Slider</span>
+            </div>
+        </h1>
     </header>
     <!-- /Header -->
 
@@ -40,8 +45,14 @@
 
             <!-- Action buttons -->
             <div id="anime-action-buttons-container">
-                <button class="primary-button">Watch</button>
-                <button class="secondary-button">Add to list</button>
+                <button class="primary-button">
+                    <i class="fa-solid fa-play"></i>
+                    Watch
+                </button>
+                <button class="secondary-button">
+                    <i class="fa-solid fa-plus"></i>
+                    Add to list
+                </button>
             </div>
             <!-- /Action buttons -->
         </section>
@@ -51,11 +62,11 @@
         <section id="slider-section">
             <!-- Anime covers -->
             <div id="slider-image-container">
-                <img class="anime-cover-image" src="#" alt="#">
-                <img class="anime-cover-image" src="#" alt="#">
-                <img class="anime-cover-image" src="#" alt="#">
-                <img class="anime-cover-image" src="#" alt="#">
-                <img class="anime-cover-image" src="#" alt="#">
+                <img class="anime-cover-image anime-cover-first" src="./images/placeholder-image.png" alt="#">
+                <img class="anime-cover-image anime-cover-previous" src="./images/placeholder-image.png" alt="#">
+                <img class="anime-cover-image anime-cover-selected" src="./images/placeholder-image.png" alt="#">
+                <img class="anime-cover-image anime-cover-next" src="./images/placeholder-image.png" alt="#">
+                <img class="anime-cover-image anime-cover-last" src="./images/placeholder-image.png" alt="#">
             </div>
             <!-- /Anime covers -->
         </section>
@@ -69,9 +80,10 @@
         
         <!-- Social media -->
         <div id="social-media-container">
-            <img src="#" alt="#">
-            <img src="#" alt="#">
-            <img src="#" alt="#">
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-github"></i> 
         </div>
         <!-- /Social media -->
 
@@ -79,5 +91,6 @@
     <!-- /Footer -->
     
     <script type="module" src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/85b090ab76.js" crossorigin="anonymous"></script>
 </body>
 </html>

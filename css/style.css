@@ -16,6 +16,7 @@
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
+  box-sizing: border-box;
 }
 
 body {
@@ -36,6 +37,12 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 12rem;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
 }
 
 #color-anime-title {
@@ -70,14 +77,18 @@ main {
   gap: 12px;
 }
 
+/* Divisors */
 #anime-short-info-container span:nth-child(1) {
   border-right: solid var(--font-color) 1.5px;
   padding-right: 1rem;
 }
 #anime-short-info-container span:nth-child(2) {
-  font-weight: bold;
   border-right: solid var(--font-color) 1.5px;
   padding-right: 1rem;
+}
+
+#anime-age-restriction, #anime-gender {
+  font-weight: bold;
 }
 
 #anime-description p {
@@ -93,6 +104,9 @@ main {
 }
 
 .primary-button {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
   color: var(--font-color);
   font: var(--text);
   background-color: var(--primary);
@@ -103,6 +117,9 @@ main {
 }
 
 .secondary-button {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
   color: var(--font-color);
   font: var(--text);
   background-color: transparent;
@@ -129,6 +146,75 @@ button:hover {
   cursor: pointer;
 }
 
+#slider-image-container {
+  display: flex;
+  gap: 1px;
+  position: relative;
+  padding: 50px 20px 50px 20px;
+  background-color: rgba(235, 235, 235, 0.4);
+  backdrop-filter: blur(8px);
+  align-items: center;
+}
+
+.anime-cover-image {
+  width: 160px;
+  height: 220px;
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.4);
+  transition: all .2s ease-in-out;
+}
+
+.anime-cover-image:hover {
+  border: solid var(--primary) 1px;
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  scale: 105%;
+}
+
+.anime-cover-selected {
+  width: 160px;
+  height: 220px;
+  z-index: 2;
+}
+
+.anime-cover-previous, .anime-cover-next {
+  width: 140px;
+  height: 200px;
+  filter: brightness(70%) opacity(90%);
+}
+
+.anime-cover-first, .anime-cover-last {
+  width: 120px;
+  height: 180px;
+  filter: brightness(50%) opacity(80%);
+}
+
+.anime-cover-previous {
+  transform: translateX(20px);
+}
+
+.anime-cover-first {
+  transform: translateX(50px);
+}
+
+.anime-cover-next {
+  transform: translateX(-20px);
+  z-index: 1;
+}
+
+.anime-cover-last {
+  transform: translateX(-50px);
+}
+
 footer {
-  display: flex;justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+#social-media-container {
+  display: flex;
+  gap: 1rem;
+}
+
+#social-media-container i:hover {
+  cursor: pointer;
 }

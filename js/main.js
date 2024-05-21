@@ -1,3 +1,5 @@
+import { loadAnimeInfo } from "./utils.js";
+
 const fetchData = async () => {
   const response = await fetch('../core/database.json');
   const data = await response.json();
@@ -7,31 +9,14 @@ const animeList = await fetchData();
 
 const animeImageCovers = document.querySelectorAll(".anime-cover-image");
 
-const animeLogo = document.querySelector("#anime-logo");
-const animeTitle = document.querySelector("#anime-title");
-const animeDescription = document.querySelector("#anime-description");
-const animeReleaseDate = document.querySelector("#anime-release-date");
-const animeAgeRestriction = document.querySelector("#anime-age-restriction");
-const animeGender = document.querySelector("#anime-gender");
-
-const loadFistAnime = () => {
-  animeTitle.textContent = animeList["anime"][0].title;
-  animeLogo.setAttribute("src", animeList["anime"][0].logo);
-  animeDescription.textContent = animeList["anime"][0].description;
-  animeReleaseDate.textContent = animeList["anime"][0].releaseYear;
-  animeAgeRestriction.textContent = `+${animeList["anime"][0].ageRestriction}`;
-};
-loadFistAnime();
+// Load first anime
+loadAnimeInfo(animeList["anime"][0]);
 
 // Changes anime data based on the anime the user clicked
 animeImageCovers.forEach((animeCoverImage) => {
   animeCoverImage.addEventListener("click", () => {
     const clickedId = animeCoverImage.getAttribute("data-id");
     const clickedAnimeData = animeList["anime"].find(anime => anime.id === Number(clickedId));
-    animeTitle.textContent = clickedAnimeData.title;
-    animeLogo.setAttribute("src", clickedAnimeData.logo);
-    animeDescription.textContent = clickedAnimeData.description;
-    animeReleaseDate.textContent = clickedAnimeData.releaseYear;
-    animeAgeRestriction.textContent = `+${clickedAnimeData.ageRestriction}`;
+    loadAnimeInfo(clickedAnimeData);
   });
 })

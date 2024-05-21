@@ -1,6 +1,7 @@
 {
     "anime": [
         {
+            "id": 1,
             "title": "Demon Slayer",
             "description": "bla bla",
             "logo": "../images/demon-slayer/demon-slayer-logo.png",
@@ -11,6 +12,7 @@
             "gender": "Shounen"
         },
         {
+            "id": 2,
             "title": "Dragon Ball Super",
             "description": "bla bla",
             "logo": "../images/dragon-ball/dragon-ball-logo.png",
@@ -21,6 +23,7 @@
             "gender": "Shounen"
         },
         {
+            "id": 3,
             "title": "Jojo's bizarre adventure",
             "description": "bla bla",
             "logo": "../images/jojo/jojo-logo.png",
@@ -31,6 +34,7 @@
             "gender": "Shounen"
         },
         {
+            "id": 4,
             "title": "Naruto",
             "description": "bla bla",
             "logo": "../images/naruto/naruto-logo.png",
@@ -41,6 +45,7 @@
             "gender": "Shounen"
         },
         {
+            "id": 5,
             "title": "Death Note",
             "description": "bla bla",
             "logo": "../images/death-note/death-note-logo.png",

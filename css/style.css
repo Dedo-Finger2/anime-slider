@@ -181,6 +181,7 @@ button:hover {
 }
 
 .anime-cover-image {
+  filter: brightness(80%) opacity(95%);
   width: 160px;
   height: 220px;
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.4);
@@ -192,13 +193,6 @@ button:hover {
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.5);
   cursor: pointer;
   scale: 102%;
-}
-
-.anime-cover-selected {
-  width: 160px;
-  height: 220px;
-  border: solid var(--primary) 1px;
-  z-index: 2;
 }
 
 .anime-cover-previous, .anime-cover-next {
@@ -233,6 +227,14 @@ button:hover {
 
 .anime-cover-image:nth-child(5) {
   transform: translateX(-50px);
+}
+
+.anime-cover-selected {
+  width: 160px;
+  filter: none;
+  height: 220px;
+  border: solid var(--primary) 1px;
+  z-index: 2;
 }
 
 footer {

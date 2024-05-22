@@ -151,8 +151,13 @@ header h1 {
   padding: 0.4rem 1rem 0.4rem 1rem;
   border-radius: 2px;
   font-weight: bold;
+  transition: background-color .2s ease-in-out;
   animation: slideInLeft 0.7s ease-in-out 0.8s 1 normal forwards;
   transform: translateX(-500px);
+}
+
+.primary-button:hover {
+  background-color: var(--secondary);
 }
 
 .secondary-button {
@@ -166,8 +171,13 @@ header h1 {
   padding: 0.4rem 1rem 0.4rem 1rem;
   border-radius: 2px;
   font-weight: bold;
+  transition: background-color .2s ease-in-out;
   animation: slideInLeft 0.7s ease-in-out 1.4s 1 normal forwards;
   transform: translateX(-500px);
+}
+
+.secondary-button:hover {
+  background-color: var(--secondary);
 }
 
 #watch-trailer-button {

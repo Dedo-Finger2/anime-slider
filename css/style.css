@@ -29,6 +29,11 @@ body {
   background-color: black;
 }
 
+.social-link {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
 #background-image {
   top: 0;
   left: 0;

@@ -1,4 +1,4 @@
-import { loadAnimeInfo } from "./utils.js";
+import { loadAnimeInfo, playSong } from "./utils.js";
 
 const fetchData = async () => {
   const response = await fetch('../core/database.json');
@@ -10,6 +10,10 @@ const animeList = await fetchData();
 const animeImageCovers = document.querySelectorAll(".anime-cover-image");
 
 // Load first anime
+setTimeout(() => {
+  playSong(animeList["anime"][0].song)
+}, 2400) // 2.4s;
+
 loadAnimeInfo(animeList["anime"][0]);
 
 // Changes anime data based on the anime the user clicked

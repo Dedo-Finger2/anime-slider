@@ -12,10 +12,6 @@
   --third: #52525B;
 }
 
-#editor {
-  --background-image: ""
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +67,7 @@ header h1 {
   display: flex;
   align-items: center;
   gap: .6rem;
+  animation: slideInLeft 0.7s ease-in-out 0s 1 normal none;
 }
 
 #color-anime-title {
@@ -93,10 +90,12 @@ header h1 {
 #anime-logo {
   width: 325px;
   border-radius: 2px;
+  animation: slideInLeft 0.9s ease-in-out 0s 1 normal none;
 }
 
 #anime-title {
   font: var(--h1);
+  animation: slideInLeft 0.7s ease-in-out 0s 1 normal none;
 }
 
 #anime-short-info-container {
@@ -109,20 +108,30 @@ header h1 {
 #anime-short-info-container span:nth-child(1) {
   border-right: solid var(--font-color) 1.5px;
   padding-right: 1rem;
+  transform: translateX(-400px);
+  animation: slideInLeft 0.7s ease-in-out 0.7s 1 normal forwards;
 }
 #anime-short-info-container span:nth-child(2) {
   border-right: solid var(--font-color) 1.5px;
   padding-right: 1rem;
+  animation: slideInLeft 0.7s ease-in-out 1.4s 1 normal forwards;
+  transform: translateX(-400px);
 }
 
 #anime-age-restriction, #anime-gender {
   font-weight: bold;
 }
 
+#anime-gender {
+  animation: slideInLeft 0.7s ease-in-out 2.1s 1 normal forwards;
+  transform: translateX(-400px);
+}
+
 #anime-description-container p {
   flex-wrap: wrap;
   font: var(--text);
   width: 100%;
+  animation: slideInLeft 0.7s ease-in-out 0s 1 normal none;
 }
 
 #anime-action-buttons-container {
@@ -142,6 +151,8 @@ header h1 {
   padding: 0.4rem 1rem 0.4rem 1rem;
   border-radius: 2px;
   font-weight: bold;
+  animation: slideInLeft 0.7s ease-in-out 0.8s 1 normal forwards;
+  transform: translateX(-500px);
 }
 
 .secondary-button {
@@ -155,6 +166,8 @@ header h1 {
   padding: 0.4rem 1rem 0.4rem 1rem;
   border-radius: 2px;
   font-weight: bold;
+  animation: slideInLeft 0.7s ease-in-out 1.4s 1 normal forwards;
+  transform: translateX(-500px);
 }
 
 #watch-trailer-button {
@@ -164,6 +177,8 @@ header h1 {
   font: var(--text);
   font-weight: bold;
   transition: all .1s ease-in-out;
+  animation: slideInLeft 0.7s ease-in-out 0s 1 normal forwards;
+  transform: translateX(-500px);
 }
 
 #watch-trailer-button:hover {
@@ -183,6 +198,8 @@ button:hover {
   backdrop-filter: blur(20px);
   align-items: center;
   border-radius: 6px;
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out 2.8s 1 normal forwards;
 }
 
 .anime-cover-image {
@@ -191,6 +208,8 @@ button:hover {
   height: 220px;
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.4);
   transition: all .2s ease-in-out;
+  /* animation: fadeIn 0.4s ease-in-out 3.8s 1 normal forwards;
+  opacity: 0; */
 }
 
 .anime-cover-image:hover {
@@ -214,23 +233,33 @@ button:hover {
 }
 
 .anime-cover-image:nth-child(1) {
+  animation: slideInAbove 0.8s ease-in-out 5.2s 1 normal forwards;
+  opacity: 0;
   transform: translateX(50px);
 }
 
 .anime-cover-image:nth-child(2) {
   transform: translateX(50px);
+  animation: slideInAbove 0.8s ease-in-out 4.6s 1 normal forwards;
+  opacity: 0;
 }
 
 .anime-cover-image:nth-child(3) {
+  animation: slideInAbove 0.8s ease-in-out 4s 1 normal forwards;
+  opacity: 0;
   transform: translateX(-20px);
   z-index: 1;
 }
 
 .anime-cover-image:nth-child(4) {
+  animation: slideInAbove 0.8s ease-in-out 4.6s 1 normal forwards;
+  opacity: 0;
   transform: translateX(-50px);
 }
 
 .anime-cover-image:nth-child(5) {
+  animation: slideInAbove 0.8s ease-in-out 5.2s 1 normal forwards;
+  opacity: 0;
   transform: translateX(-50px);
 }
 
@@ -248,10 +277,51 @@ footer {
 }
 
 #social-media-container {
+  animation: slideInAbove 0.8s ease-in-out 5.2s 1 normal forwards;
+  opacity: 0;
   display: flex;
   gap: 1rem;
 }
 
 #social-media-container i:hover {
   cursor: pointer;
+}
+
+/* Animações */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-450px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(450px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInAbove {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

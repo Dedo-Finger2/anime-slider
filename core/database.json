@@ -9,7 +9,8 @@
             "background": "../images/demon-slayer/demon-slayer-background.jpg",
             "ageRestriction": 15,
             "releaseYear": 2019,
-            "gender": "Shounen"
+            "gender": "Shounen",
+            "song": "./../songs/demon-slayer.mp3"
         },
         {
             "id": 2,
@@ -20,7 +21,8 @@
             "background": "../images/dragon-ball/dragon-ball-background.jpg",
             "ageRestriction": 10,
             "releaseYear": 2017,
-            "gender": "Shounen"
+            "gender": "Shounen",
+            "song": "./../songs/dragon-ball.mp3"
         },
         {
             "id": 3,
@@ -31,7 +33,8 @@
             "background": "../images/jojo/jojo-background.jpg",
             "ageRestriction": 13,
             "releaseYear": 2016,
-            "gender": "Shounen"
+            "gender": "Shounen",
+            "song": "./../songs/jojo.mp3"
         },
         {
             "id": 4,
@@ -42,7 +45,8 @@
             "background": "../images/naruto/naruto-background.jpg",
             "ageRestriction": 16,
             "releaseYear": 2002,
-            "gender": "Shounen"
+            "gender": "Shounen",
+            "song": "./../songs/naruto.mp3"
         },
         {
             "id": 5,
@@ -53,7 +57,8 @@
             "background": "../images/death-note/death-note-background.jpg",
             "ageRestriction": 14,
             "releaseYear": 2006,
-            "gender": "Shounen"
+            "gender": "Shounen",
+            "song": "./../songs/death-note.mp3"
         }
     ]
 }

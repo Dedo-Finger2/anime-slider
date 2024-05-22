@@ -13,15 +13,9 @@ export const loadAnimeInfo = (anime) => {
   animeReleaseDate.textContent = anime.releaseYear;
   animeAgeRestriction.textContent = `+${anime.ageRestriction}`;
   animeGender.textContent = anime.gender;
-
-  // Inicia a transição de fade out
   backgroundImage.classList.add('hidden');
-
-  // Aguarda o término da transição de fade out antes de mudar a imagem de fundo
   setTimeout(() => {
       backgroundImage.style.backgroundImage = `url(${anime.background})`;
-
-      // Inicia a transição de fade in
       backgroundImage.classList.remove('hidden');
-  }, 400); // O tempo aqui deve corresponder ao tempo da transição CSS (0.4s)
+  }, 400); // 0.4s
 }

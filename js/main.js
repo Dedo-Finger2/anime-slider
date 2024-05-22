@@ -15,7 +15,6 @@ loadAnimeInfo(animeList["anime"][0]);
 // Changes anime data based on the anime the user clicked
 animeImageCovers.forEach((animeCoverImage) => {
   animeCoverImage.addEventListener("click", () => {
-    const oldAnimeCoverSelected = document.querySelector(".anime-cover-selected");
     const clickedId = animeCoverImage.getAttribute("data-id");
     const clickedAnimeData = animeList["anime"].find(anime => anime.id === Number(clickedId));
     loadAnimeInfo(clickedAnimeData);

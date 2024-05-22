@@ -10,9 +10,9 @@ const animeList = await fetchData();
 const animeImageCovers = document.querySelectorAll(".anime-cover-image");
 
 // Load first anime
-setTimeout(() => {
+window.addEventListener('click', () => {
   playSong(animeList["anime"][0].song)
-}, 2400) // 2.4s;
+});
 
 loadAnimeInfo(animeList["anime"][0]);
 

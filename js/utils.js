@@ -13,6 +13,7 @@ export const playSong = (songPath) => {
     song.pause();
   }
   song = new Audio(songPath);
+  song.volume = 0.1;
   song.play();
 }
 

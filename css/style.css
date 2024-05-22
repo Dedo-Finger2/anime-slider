@@ -68,6 +68,10 @@ main {
   gap: 12rem;
 }
 
+header {
+  padding-bottom: 54px;
+}
+
 header h1 {
   display: flex;
   align-items: center;
@@ -93,7 +97,7 @@ header h1 {
 }
 
 #anime-logo {
-  width: 325px;
+  width: 175px;
   border-radius: 2px;
   animation: slideInLeft 0.9s ease-in-out 0s 1 normal none;
 }
@@ -129,7 +133,7 @@ header h1 {
 
 #anime-gender {
   animation: slideInLeft 0.7s ease-in-out 2.1s 1 normal forwards;
-  transform: translateX(-400px);
+  transform: translateX(-1200px);
 }
 
 #anime-description-container p {
@@ -305,7 +309,7 @@ footer {
 /* Animações */
 @keyframes slideInLeft {
   from {
-    transform: translateX(-450px);
+    transform: translateX(-1250px);
   }
   to {
     transform: translateX(0);
@@ -314,7 +318,7 @@ footer {
 
 @keyframes slideInRight {
   from {
-    transform: translateX(450px);
+    transform: translateX(950px);
   }
   to {
     transform: translateX(0);
@@ -338,5 +342,109 @@ footer {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 1365px) {
+  main {
+    flex-direction: column;
+  }
+  #slider-section {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 1195px) {
+  footer {
+    /* margin-top: 1rem; */
+    padding-top: 24px;
+    padding-bottom: 24px;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #anime-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #anime-info-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #anime-title {
+    text-align: center;
+  }
+  #slider-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #slider-image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #slider-image-container img {
+    width: 100px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 54px;
+  }
+  #anime-description {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  #slider-image-container {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column dense; /* Fluxo de colunas com "dense" para preencher todas as células */
+    grid-template-rows: 1fr; /* Duas linhas */
+    grid-auto-columns: 50px;
+    padding-right: 23%;
+  }
+  #slider-image-container img {
+    width: 160px;
+    justify-self: center;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #slider-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  #slider-image-container {
+    padding: 30px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }

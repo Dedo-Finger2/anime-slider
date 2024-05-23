@@ -1,22 +1,16 @@
-import { loadAnimeInfo, playSong } from "./utils.js";
-
-const fetchData = async () => {
-  const response = await fetch('../core/database.json');
-  const data = await response.json();
-  return data;
-};
-const animeList = await fetchData();
+import { loadAnimeInfo } from "./utils.js";
+import { database } from "./../core/database.js";
 
 const animeImageCovers = document.querySelectorAll(".anime-cover-image");
 
 // Load first anime
-loadAnimeInfo(animeList["anime"][0]);
+loadAnimeInfo(database[0]);
 
 // Changes anime data based on the anime the user clicked
 animeImageCovers.forEach((animeCoverImage) => {
   animeCoverImage.addEventListener("click", () => {
     const clickedId = animeCoverImage.getAttribute("data-id");
-    const clickedAnimeData = animeList["anime"].find(anime => anime.id === Number(clickedId));
+    const clickedAnimeData = database.find(anime => anime.id === Number(clickedId));
     loadAnimeInfo(clickedAnimeData);
   });
 })
